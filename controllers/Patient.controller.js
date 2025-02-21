@@ -81,7 +81,6 @@ exports.updatePatient = async (req, res) => {
   }
 };
 
-// Delete a patient
 exports.deletePatient = async (req, res) => {
    if (isNaN(req.params.id)) {
      return res.status(400).json({ message: "Invalid Patient ID" });
