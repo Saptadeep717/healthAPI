@@ -9,10 +9,5 @@ const Mapping = sequelize.define("Mapping", {
   createdBy: { type: DataTypes.INTEGER, allowNull: false },
 });
 
-Patient.belongsToMany(Doctor, { through: Mapping, foreignKey: "patientId" });
-Doctor.belongsToMany(Patient, { through: Mapping, foreignKey: "doctorId" });
-
-Mapping.belongsTo(Patient, { foreignKey: "patientId" });
-Mapping.belongsTo(Doctor, { foreignKey: "doctorId" });
 
 module.exports = Mapping;
